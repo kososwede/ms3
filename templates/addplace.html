@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container add-place-container">
-<h3>Add Place</h3>
+
+<h3 class="addplace-title"><strong>Add Place</strong></h3>
+<div class="container">
+
 <form class="validation" action="{{url_for('insert_place')}}" method="POST">
 <div class="row">
-<div class="col 12">
+<div class="col 8">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Categories</label>
@@ -19,7 +21,7 @@
 </div>
 </div>
 <div class="row">
-<div class="col 12">
+<div class="col 8">
   <div class="form-group">
     <label for="validationCustom1">Place Name:</label>
     <input type="text" class="validate" id="place_name" name="place_name" required>
@@ -27,7 +29,7 @@
   </div>
   </div>
   <div class="row">
-<div class="col 12">
+<div class="col 8">
   <div class="form-group">
     <label for="validationCustom2">Your Name:</label>
     <input type="text" class="validate" id="user_name" name="user_name" required>
@@ -35,7 +37,7 @@
  </div>
   </div>
   <div class="row">
-<div class="col 12">
+<div class="col 8">
   <div class="form-group">
     <label for="validationCustom2">Web Address:</label>
     <input type="url" class="validate" id="website" name="website">

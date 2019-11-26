@@ -1,3 +1,26 @@
-body {
-    background-color: red;
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.addplace-title {
+    text-align: center;
+    padding-top: 5%;
+    font-family: 'Rock Salt', cursive;
+}
+
+.container {
+    background-color: rgb(233, 233, 43);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.background-pic {
+    background-image: url('../images/stockholm1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
