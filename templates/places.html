@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    {% for place in places %}
-    {{place.category_name}}
-    {{place.place_name}}
-    {{place.user_name}}
-    {{place.user_comments}}
+{% extends 'base.html' %}
+{% block content %}
+
+
+    
+  <div class="row">
+  {% for cat in categories %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{cat.category_name}}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    
+  
     {% endfor %}
-</body>
-</html>
+</div>
+
+    {% endblock %}

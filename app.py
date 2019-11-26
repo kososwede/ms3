@@ -17,6 +17,11 @@ def get_places():
     return render_template("places.html", places=mongo.db.places.find())
 
 
+@app.route("/add_place")
+def add_place():
+    return render_template("addplace.html", categories=mongo.db.categories.find())
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),
