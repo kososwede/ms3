@@ -22,6 +22,13 @@ def add_place():
     return render_template("addplace.html", categories=mongo.db.categories.find())
 
 
+
+@app.route("/insert_place", methods=['POST'])
+def insert_place():
+    places = mongo.db.places
+    places.insert_one(request.form.to_dict())
+    return redirect(url_for('get_places'))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),

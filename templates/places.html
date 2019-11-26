@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-    
-  <div class="row">
-  {% for cat in categories %}
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{cat.category_name}}</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+{% for place in places %}
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+  
+    <h5 class="card-title">{{place.place_name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{place.user_name}}</h6>
+    <p class="card-text">{{place.user_comments}}</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+   
+  {% endfor %}
     
   
-    {% endfor %}
-</div>
 
-    {% endblock %}
+{% endblock %}
