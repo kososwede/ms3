@@ -1,20 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-
-{% for place in places %}
+<div class="container">
+<div class="row">
+ 
+ {% for place in places %}
+ <div class="col 12">
  <div class="card" style="width: 18rem;">
+
   <div class="card-body">
   
     <h5 class="card-title">{{place.place_name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{place.user_name}}</h6>
     <p class="card-text">{{place.user_comments}}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="{{place.website}}" target="_blank" class="card-link">Website</a>
+
   </div>
 </div>
-   
+    </div>
   {% endfor %}
-    
-  
+   
+  </div>
+   </div>
 
 {% endblock %}
