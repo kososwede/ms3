@@ -2,16 +2,41 @@
 {% block content %}
 <h3 class="title"><strong>Places</strong></h3>
 <div class="container container-pic">
-<div class="row">
-{% for cat in categories %}
-<div class="col sm-6 md-1">
- <div class="card" style="width: 18rem;">
-<div class="card-body">
-    <h3 class="card-title">{{cat.category_name}}</h5>
+<div class="card-columns">
+  <div class="card bg-primary card-museum">
+    <div class="card-body text-center">
+      <a href="museums.html">museum</a>
+      <p class="card-text">MUSEUMS</p>
     </div>
- </div>
+  </div>
+  <div class="card bg-warning card-parks">
+    <div class="card-body text-center">
+      <p class="card-text">PARKS</p>
+    </div>
+  </div>
+  <div class="card bg-success card-attractions">
+    <div class="card-body text-center">
+      <p class="card-text">ATTRACTIONS</p>
+    </div>
+  </div>
+  <div class="card bg-danger card-fooddrink">
+    <div class="card-body text-center">
+      <p class="card-text">FOOD & DRINK</p>
+    </div>
+  </div>
+  <div class="card bg-light card-history">
+    <div class="card-body text-center">
+      <p class="card-text">HISTORY</p>
+    </div>
+  </div>
+  <div class="card bg-info card-activities">
+    <div class="card-body text-center">
+      <p class="card-text">ACTIVITIES</p>
+    </div>
+  </div>
 </div>
-{% endfor %}
- </div>
- </div>
+</div>
+
+
+
 {% endblock %}

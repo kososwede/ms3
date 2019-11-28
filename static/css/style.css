@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 body,
 html {
     width: 100%;
@@ -10,10 +10,16 @@ html {
 .card {
     border-radius:.50rem!important;
     padding-top: 30px;
+    height:200px;
+    width: 280px;
 }
 
-.card-title {
+.card-text {
+    font-size: 35px;
     text-align: center;
+    font-family: 'Anton', sans-serif;
+    color:cornsilk;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .title {
@@ -23,6 +29,7 @@ html {
 }
 
 .container {
+    align-content: center;
     background-color: white;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -32,7 +39,8 @@ html {
 .container-pic {
     background-image: url("../images/flagnew.jpg");
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    
 }
 
 button {
@@ -41,6 +49,38 @@ button {
 
 .background-pic {
     background-image: url('../images/stockholm1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------------images to cards---------*/
+.card-history {
+    background-image: url('../images/history.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-museum{
+    background-image: url('../images/museum.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-parks {
+    background-image: url('../images/park.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-attractions {
+    background-image: url('../images/grona-lund.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-fooddrink {
+    background-image: url('../images/fooddrink.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-activities {
+    background-image: url('../images/activities.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
