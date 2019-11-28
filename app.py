@@ -33,9 +33,34 @@ def insert_place():
     return redirect(url_for('get_places'))
 
 
-@app.route("/place_cats-and_names")
-def place_cats_and_names():
-    return render_template(url_for('place-cats-and-names.html'))
+@app.route("/museums.html")
+def museums():
+    return render_template("museums.html")
+
+
+@app.route("/parks.html")
+def parks():
+    return render_template("parks.html")
+
+
+@app.route("/activities.html")
+def activities():
+    return render_template("activities.html")
+
+
+@app.route("/fooddrink.html")
+def fooddrink():
+    return render_template("fooddrink.html")
+
+
+@app.route("/history.html")
+def history():
+    return render_template("history.html")
+
+
+@app.route("/attractions.html")
+def attractions():
+    return render_template("attractions.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
