@@ -7,16 +7,36 @@ html {
     overflow-x: hidden;
 }
 
-.addplace-title {
+.card {
+    border-radius:.50rem!important;
+    padding-top: 30px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.title {
     text-align: center;
     padding-top: 5%;
     font-family: 'Rock Salt', cursive;
 }
 
 .container {
-    background-color: rgb(233, 233, 43);
+    background-color: white;
     padding-top: 2%;
     padding-bottom: 2%;
+    border-radius:.50rem!important;
+}
+
+.container-pic {
+    background-image: url("../images/flagnew.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+button {
+    text-align: center;
 }
 
 .background-pic {

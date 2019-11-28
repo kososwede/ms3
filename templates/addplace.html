@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3 class="addplace-title"><strong>Add Place</strong></h3>
+<h3 class="title"><strong>Add Place</strong></h3>
 <div class="container">
 
 <form class="validation" action="{{url_for('insert_place')}}" method="POST">
@@ -23,24 +23,16 @@
 <div class="row">
 <div class="col 8">
   <div class="form-group">
-    <label for="validationCustom1">Place Name:</label>
+    <label for="validationCustom1"><strong>Place Name:</strong></label>
     <input type="text" class="validate" id="place_name" name="place_name" required>
   </div>
   </div>
   </div>
   <div class="row">
 <div class="col 8">
-  <div class="form-group">
+  <div class="input-group mb-3">
     <label for="validationCustom2">Your Name:</label>
     <input type="text" class="validate" id="user_name" name="user_name" required>
-  </div>
- </div>
-  </div>
-  <div class="row">
-<div class="col 8">
-  <div class="form-group">
-    <label for="validationCustom2">Web Address:</label>
-    <input type="url" class="validate" id="website" name="website">
   </div>
  </div>
   </div>
@@ -48,8 +40,19 @@
     <label for="exampleFormControlTextarea1">Your Comments:</label>
     <textarea class="form-control" name="user_comments" id="user_comments" rows="3" required></textarea>
   </div>
- 
-  <button type="submit" class="btn btn-success" name="action">SUBMIT</button>
+ <div class="row">
+<div class="col 8">
+  <div class="form-group">
+    <label for="validationCustom2">Place Website:</label>
+    <input type="url" class="validate" id="website" name="website">
+  </div>
+ </div>
+  </div>
+  <div class="row">
+  <div class="col 8">
+  <button type="submit" class="btn btn-block btn-success" name="action">SUBMIT</button>
+</div>
+</div>
 </form>
 </div>
 
