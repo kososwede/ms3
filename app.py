@@ -13,6 +13,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/get_places")
 def get_places():
     return render_template("places.html", places=mongo.db.places.find().sort("category_name"), categories=mongo.db.categories.find())
@@ -20,65 +25,54 @@ def get_places():
 
 @app.route("/add_place")
 def add_place():
-    return render_template("addplace.html", categories=mongo.db.categories.find(), months=mongo.db.months.find())
-
+    return render_template("addplace.html", categories=mongo.db.categories.find())
 
 
 @app.route("/insert_place", methods=['POST'])
 def insert_place():
     places = mongo.db.places
-    months = mongo.db.months
     places.insert_one(request.form.to_dict())
-    months.insert_one(request.form.to_dict("months"))
     return redirect(url_for('get_places'))
 
 
-@app.route("/museums.html")
+@app.route("/museums", methods=['GET'])
 def museums():
-    return render_template("museums.html")
+    return render_template("museums.html", places=mongo.db.places.find({'category_name': 'Museums'}))
 
 
-@app.route("/parks.html")
+@app.route("/parks")
 def parks():
     return render_template("parks.html")
 
 
-@app.route("/activities.html")
+@app.route("/activities")
 def activities():
     return render_template("activities.html")
 
 
-@app.route("/fooddrink.html")
+@app.route("/fooddrink")
 def fooddrink():
     return render_template("fooddrink.html")
 
 
-@app.route("/history.html")
+@app.route("/history")
 def history():
     return render_template("history.html")
 
 
-@app.route("/attractions.html")
+@app.route("/attractions")
 def attractions():
     return render_template("attractions.html")
 
 
-@app.route("/index.html")
-def home ():
-    return render_template("index.html")
-
-
-@app.route("/about.html")
-def about ():
+@app.route("/about")
+def about():
     return render_template("about.html")
 
 
-@app.route("/contact.html")
-def contact ():
+@app.route("/contact")
+def contact():
     return render_template("contact.html")
-
-
-
 
 
 if __name__ == "__main__":
