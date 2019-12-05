@@ -20,7 +20,8 @@ def home():
 
 @app.route("/get_places")
 def get_places():
-    return render_template("places.html", places=mongo.db.places.find().sort("category_name"), categories=mongo.db.categories.find())
+    return render_template("places.html", places=mongo.db.places.find().sort(
+        "category_name"), categories=mongo.db.categories.find())
 
 
 @app.route("/add_place")
@@ -37,32 +38,38 @@ def insert_place():
 
 @app.route("/museums", methods=['GET'])
 def museums():
-    return render_template("museums.html", places=mongo.db.places.find({'category_name': 'Museums'}))
+    return render_template("museums.html", places=mongo.db.places.find({
+        'category_name': 'Museums'}))
 
 
 @app.route("/parks")
 def parks():
-    return render_template("parks.html")
+    return render_template("parks.html", places=mongo.db.places.find({
+        'category_name': 'Parks'}))
 
 
 @app.route("/activities")
 def activities():
-    return render_template("activities.html")
+    return render_template("activities.html", places=mongo.db.places.find({
+        'category_name': 'Activities'}))
 
 
 @app.route("/fooddrink")
 def fooddrink():
-    return render_template("fooddrink.html")
+    return render_template("fooddrink.html", places=mongo.db.places.find({
+        'category_name': 'Food & Drink'}))
 
 
 @app.route("/history")
 def history():
-    return render_template("history.html")
+    return render_template("history.html", places=mongo.db.places.find({
+        'category_name': 'History'}))
 
 
 @app.route("/attractions")
 def attractions():
-    return render_template("attractions.html")
+    return render_template("attractions.html", places=mongo.db.places.find({
+        'category_name': 'Attractions'}))
 
 
 @app.route("/about")

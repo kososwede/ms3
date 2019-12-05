@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>HHHHHHHHHHHHEEEEEEEEELLLLLLLLLOOOOOOOO</h1>
+<h3 class="title"><strong>Parks</strong></h3>
+<div class="container container-museum">
+{% for place in places %}
+<div class="jumbotron">
+  <h1 class="display-4">{{place.place_name}}</h1>
+  <p class="lead">{{place.user_name}}</p>
+  <hr class="my-4">
+  <p>{{place.user_comments}}</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+{% endfor %}
+</div>
 {% endblock %}
