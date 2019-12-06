@@ -3,13 +3,19 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from os import path
+if path.exists("env.py"):
+    import env
+
 
 mongo_client = MongoClient()
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGODB_NAME")
 app.config["MONGO_URI"] = os.environ.get("MONGOURI")
+
 mongo = PyMongo(app)
+
 
 
 @app.route("/")
