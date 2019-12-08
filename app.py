@@ -102,14 +102,15 @@ def update_place(place_id):
     {
         'category_name': request.form.get('category_name'),
         'place_name': request.form.get('place_name'),
+        'user_name': request.form.get('user_name'),
         'user_comments': request.form.get('user_comments'),
         'website': request.form.get('website')
     })
     return redirect(url_for('get_places'))
 
 
-@app.route('/delete_place/<place_id')
-def delete_place(place_id)
+@app.route('/delete_place/<place_id>')
+def delete_place(place_id):
     mongo.db.places.remove({'_id': ObjectId(place_id)})
     return redirect(url_for('get_places'))
 
