@@ -4,11 +4,19 @@
 <div class="container container-museum">
 {% for place in places %}
 <div class="jumbotron">
+<div class="col 4">
   <h1 class="display-4">{{place.place_name}}</h1>
-  <p class="lead">{{place.user_name}}</p>
+</div>
+  <h3 class="lead">Name: {{place.user_name}}</h3>
   <hr class="my-4">
-  <p>{{place.user_comments}}</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <div class="col 4">
+  <h3>User Comments:</h3> <p>{{place.user_comments}}</p>
+  </div>
+  <hr class="my-4">
+  <div class="col 4">
+  <p><a href="{{place.website}}">{{place.website}}</a></p>
+  </div>
+  <a class="btn btn-primary" href="{{url_for('edit_place', place_id=place._id)}}" role="button">Edit</a>
 </div>
 {% endfor %}
 </div>

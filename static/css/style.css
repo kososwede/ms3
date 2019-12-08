@@ -103,6 +103,7 @@ nav {
     background-image: url('../images/stockholm1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 label {
@@ -140,3 +141,16 @@ label {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.edit-button {
+    color:yellow;
+}
+
+.btn_small  {
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+

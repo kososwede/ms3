@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="title"><strong>Edit Place</strong></h3>
+<div class="container">
+
+<form class="validation" action="{{url_for('update_place', place_id=place._id)}}" method="POST">
+<div class="row">
+<div class="col 8">
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Categories</label>
+  </div>
+  <select class="custom-select" id="category" name="category_name">
+        <option value="" disabled selected>Choose Category</option>
+        {% for cat in categories %}
+            {% if cat.category_name == place.category_name %}
+            <option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
+            {% else %}
+            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+        {% endif %}
+    {% endfor %}
+  </select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col 8">
+  <div class="form-group">
+    <label for="validationCustom1"><strong>Place Name:</strong></label>
+    <textarea type="text" class="validate" id="place_name" name="place_name" rows="1" required>{{place.place_name}}</textarea>
+  </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"><strong>Your Comments:</strong></label>
+    <textarea class="form-control" name="user_comments" id="user_comments" rows="3" required>{{place.user_comments}}</textarea>
+  </div>
+ <div class="row">
+<div class="col 8">
+  <div class="form-group">
+    <label for="validationCustom2"><strong>Place Website(optional):</strong></label>
+    <textarea type="url" class="validate" id="website" name="website" rows="1">{{place.website}}</textarea>
+  </div>
+ </div>
+  </div>
+  
+  <div class="text-center">
+  <button type="submit" class="btn btn-lg btn-success" name="action">SUBMIT</button>
+  <a class="btn btn-danger btn-lg" href="{{url_for('get_places')}}" role="button">Cancel</a>
+</div>
+</form>
+</div>
+
+{% endblock %}

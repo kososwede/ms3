@@ -88,6 +88,26 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route('/edit_place/<place_id>')
+def edit_place(place_id):
+    the_place = mongo.db.places.find_one({'_id': ObjectId(place_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editplace.html', place=the_place, categories=all_categories)
+
+
+@app.route('/update_place/<place_id>', methods=['POST'])
+def update_place(place_id):
+    places = mongo.db.places
+    places.update({'_id': ObjectId(place_id)},
+    {
+        'place_category': request.form.get('place_category'),
+        'place_name': request.form.get('place_name'),
+        'user_comments': request.form.get('user_comments'),
+        'website': request.form.get('website')
+    })
+    return redirect(url_for('get_places'))
+
+
 if __name__ == '__main__':
     app.run(host=os.getenv("IP", "0.0.0.0"), 
     port=int(os.getenv("PORT", 5000)),debug=
