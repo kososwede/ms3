@@ -21,6 +21,7 @@
   <a class="btn btn-danger" href="{{url_for('delete_place', place_id=place._id)}}" role="button">Delete Place</a>
 </div>
 {% endfor %}
+<a class="btn btn-success btn-lg" href="{{url_for('add_place')}}" role="button">Add Place</a>
 </div>
 
 {% endblock %}
