@@ -44,6 +44,7 @@ def insert_place():
 
 @app.route("/museums", methods=['GET'])
 def museums():
+    print("got here")
     return render_template("museums.html", places=mongo.db.places.find({
         'category_name': 'Museums'}))
 

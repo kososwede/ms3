@@ -17,12 +17,11 @@
   <div class="col 4">
   <p class="website"><strong>Website if added:</strong> <a href="{{place.website}}">{{place.website}}</a></p>
   </div>
-  
   <button class="btn btn-primary" href="{{url_for('edit_place', place_id=place._id)}}" role="button">Edit Place</button>
   <!-- Button trigger modal -->
-  <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#Modal">Delete Place</button>
+  <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#Modal{{place._id}}">Delete Place</button>
   <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="message_modal" aria-hidden="true">
+  <div class="modal fade" id="Modal{{place._id}}" tabindex="-1" role="dialog" aria-labelledby="message_modal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
