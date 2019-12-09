@@ -15,11 +15,11 @@
   <p class="comments"><strong>User Comments:</strong></p> <p>{{place.user_comments}}</p>
   </div>
   <div class="col 4">
-  <p class="website"><strong>Website if added:</strong> <a href="{{place.website}}">{{place.website}}</a></p>
+  <p class="website"><strong>Website if added:</strong> <a href="{{place.website}}" target="_blank">{{place.website}}</a></p>
   </div>
-  <button class="btn btn-primary" href="{{url_for('edit_place', place_id=place._id)}}" role="button">Edit Place</button>
+  <a class="btn btn-primary" href="{{url_for('edit_place', place_id=place._id)}}" role="button">Edit Place</a>
   <!-- Button trigger modal -->
-  <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#Modal{{place._id}}">Delete Place</button>
+  <a class="btn btn-danger" type="button" data-toggle="modal" data-target="#Modal{{place._id}}">Delete Place</a>
   <!-- Modal -->
   <div class="modal fade" id="Modal{{place._id}}" tabindex="-1" role="dialog" aria-labelledby="message_modal" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -32,8 +32,8 @@
       </div>
       <div class="modal-body">THIS ACTION CAN NOT BE UNDONE</div>
       <div class="modal-footer">
-        <a href="{{url_for('get_places')}}" type="button" class="btn btn-secondary" data-dismiss="modal">No</a>
-        <a href="{{url_for('delete_place', place_id=place._id)}}" type="button" class="btn btn-primary">Yes</a>
+        <a href="{{url_for('get_places')}}" type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">No</a>
+        <a href="{{url_for('delete_place', place_id=place._id)}}" type="button" class="btn btn-primary btn-lg">Yes</a>
       </div>
     </div>
   </div>
