@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <header class="masthead d-flex">
-    <div class="container text-center my-auto">
-      <h1 class="heading mb-1">Things To Do</h1>
-      <h3 class="mb-5 in-em"><em>in</em></h3>
-    <h1 class="place-heading mb-1">STOCKHOLM</h1>
-    
-</div>
+	<div class="container text-center my-auto">
+		<h1 class="heading mb-1">Things To Do</h1>
+		<h3 class="mb-5 in-em"><em>in</em></h3>
+		<h1 class="place-heading mb-1">STOCKHOLM</h1>
+
+	</div>
 
 
 </header>
 <div class="text-center">
-<button type="button" class="btn btn-lg btn-warning explore-button"> <a href="{{url_for('get_places')}}" target="_blank"> EXPLORE</a></button>
+	<button type="button" class="btn btn-lg btn-warning explore-button"> <a href="{{url_for('get_places')}}" target="_blank"> EXPLORE</a></button>
 </div>
 {% endblock %}

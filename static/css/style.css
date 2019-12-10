@@ -32,7 +32,8 @@ nav {
 
 .title {
     text-align: center;
-    padding-top: 1%;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-family: 'Rock Salt', cursive;
      color:gold;
      text-shadow: blue 0px 0px 1px, blue 0px 0px 1px, blue 0px 0px 1px,
@@ -158,3 +159,19 @@ label {
     background: transparent;
 }
 
+.container-about-flag {
+     align-content: center;
+    background-image: url('../images/flagnew.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius:.50rem!important;
+}
+
+h4 {
+    color: white;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}

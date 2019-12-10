@@ -17,7 +17,6 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -88,7 +87,6 @@ def about():
 def contact():
     return render_template("contact.html")
 
-
 @app.route('/edit_place/<place_id>')
 def edit_place(place_id):
     the_place = mongo.db.places.find_one({'_id': ObjectId(place_id)})
@@ -100,7 +98,7 @@ def edit_place(place_id):
 def update_place(place_id):
     places = mongo.db.places
     places.update({'_id': ObjectId(place_id)},
-    {
+                  {
         'category_name': request.form.get('category_name'),
         'place_name': request.form.get('place_name'),
         'user_name': request.form.get('user_name'),
@@ -117,6 +115,5 @@ def delete_place(place_id):
 
 
 if __name__ == '__main__':
-    app.run(host=os.getenv("IP", "0.0.0.0"), 
-    port=int(os.getenv("PORT", 5000)),debug=
-    False)
+    app.run(host=os.getenv("IP", "0.0.0.0"),
+            port=int(os.getenv("PORT", 5000)), debug=False)
