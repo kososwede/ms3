@@ -175,3 +175,27 @@ h4 {
     #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
     #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
 }
+
+.stackend .slide1 {
+background-image: url("../images/gröna.jpg");
+color:white;
+padding:50px;
+font-size:3em;
+height:50vw;
+width:100%;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.stackend .slide2 {
+background-image: url("../images/the-royal-palace.jpg");
+color:white;
+padding:50px;
+font-size:3em;
+height:50vw;
+width:100%;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+}
